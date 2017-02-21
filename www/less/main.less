@@ -1,0 +1,64 @@
+@black: #1b252e;
+@blue: #009ea7;
+@default:#666666;
+@yellow: #ffc001;
+@gray: #b8b8b8;
+@line: #cccccc;
+@graybg: #f2f2f2;
+@color333:#333;
+@font12: 12px;
+@font14:14px;
+@font16:16px;
+@font24:24px;
+@font26:26px;
+@font18: 18px;
+@font22: 22px;
+
+.clear(){
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.radius(@jd:5px){
+  -webkit-border-radius: @jd;
+  -moz-border-radius: @jd;
+  border-radius: @jd;
+}
+.boxsize(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.backgroundsize(){
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.my-button(@w,@h,@r,@f,@c,@b){
+  width: @w;
+  height: @h;
+  .radius(@r);
+  color: @c;
+  background-color: @b;
+  border: none;
+  text-align: center;
+  line-height: @h;
+  font-size: @f;
+  display: block;
+}
+.boxsha(@a:0px,@b:5px,@c:5px,@d:#ccc){
+  -webkit-box-shadow: @a @b @c @d;
+  -moz-box-shadow: @a @b @c @d;
+  -o-box-shadow: @a @b @c @d;
+  box-shadow: @a @b @c @d;
+}
+.transition(@a:all,@t:.5s){
+  -webkit-transition: @a @t;
+  -moz-transition: @a @t;
+  -ms-transition: @a @t;
+  -o-transition: @a @t;
+  transition: @a @t;
+}

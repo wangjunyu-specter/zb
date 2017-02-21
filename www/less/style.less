@@ -1,0 +1,421 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+body {
+  font-family: '微软雅黑';
+}
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration: none; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+a {
+  cursor: pointer;
+}
+@import (reference) "main.less";
+.page-top{
+  width: 100%;
+  height: 29px;
+  border-bottom: 1px solid @line;
+  background-color: #fff;
+  .top-nav{
+    float: right;
+    list-style: none;
+    li{
+      float: left;
+      height: 29px;
+      line-height: 29px;
+      margin-left: 22px;
+      a {
+        color: @default;
+        font-size: @font12;
+      }
+    }
+  }
+}
+.page-width {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  .clear();
+}
+.page-logo{
+  .clear();
+  .left{
+    float: left;
+    margin-top: 30px;
+    .clear();
+    &>div {
+      height: 46px;
+      float: left;
+      img {
+        width: 100%;
+      }
+
+    }
+    .logo {
+      width: 150px;
+    }
+    .address {
+      position: relative;
+      width: 150px;
+      &>div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        i {
+          margin-left: 20px;
+          color: @gray;
+        }
+        span:first-of-type {
+          margin-right: 10px;
+          color: @default;
+          font-size: @font14;
+        }
+        span:last-of-type {
+          color: @blue;
+          font-size: @font12;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+  }
+  .right {
+    float: right;
+    margin-top: 40px;
+    position: relative;
+    .input-box {
+      width: 490px;
+      height: 30px;
+      border: 1px solid @line;
+      .radius();
+      .clear();
+      span {
+        width: 84px;
+        height: 30px;
+        line-height: 30px;
+        font-size: @font14;
+        color: @default;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+      }
+      input {
+        width: 320px;
+        border: none;
+        font-size: @font14;
+        padding-left: 20px;
+        border-left: 1px solid @line;
+        height: 28px;
+        margin-top: 1px;
+        .boxsize();
+      }
+      a {
+        width: 76px;
+        height: 30px;
+        line-height: 30px;
+        background-color: @blue;
+        text-align: center;
+        display: inline-block;
+        float: right;
+        font-size: @font16;
+        color: #fff;
+        .radius();
+      }
+    }
+    ul {
+      display: none;
+      position: absolute;
+      width: 150px;
+      padding: 10px;
+      .boxsize();
+      background-color: #fff;
+      z-index: 1001;
+      li {
+        line-height: 30px;
+        padding: 0 10px;
+        font-size: @font14;
+        border-bottom: 1px dashed @line;
+        color: @default;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.cityss {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  padding: 30px;
+  z-index: 1002;
+  background-color: #fff;
+  .boxsize();
+  ul {
+    margin-left: 30px;
+    display: block;
+    .clear();
+  }
+  li {
+    float: left;
+    margin-right: 20px;
+    line-height: 30px;
+    color: @default;
+    font-size: @font14;
+    cursor: pointer;
+  }
+}
+nav {
+  width: 100%;
+  height: 53px;
+  background-color: @black;
+  margin-top: 36px;
+  ul {
+    .clear();
+    li {
+      float: left;
+      a {
+        font-size: @font16;
+        color: #fff;
+        display: block;
+        width: 112px;
+        line-height: 53px;
+        text-align: center;
+      }
+      &.active {
+        a {
+          background-color: @yellow;
+        }
+      }
+    }
+  }
+}
+.slick-prev:before, .slick-next:before{
+  color: @default;
+  font-size: 50px;
+}
+.slick-prev:before {
+  content: url("../img/arrowleft.png");
+}
+.slick-next:before {
+  content: url('../img/arrow-right.png');
+}
+.slick-prev , .slick-next {
+  z-index: 500;
+}
+.slick-next {
+  right: 0;
+}
+
+footer {
+  background-color: #1b252e;
+  .nav {
+    border-bottom: 1px solid @line;
+    text-align: center;
+    ul {
+      .clear();
+      display: inline-block;
+      li {
+        float: left;
+        height: 66px;
+        padding: 0 33px;
+        line-height: 66px;
+        a {
+          color: #8b939d;
+          font-size: @font14;
+        }
+      }
+    }
+  }
+  .box {
+    padding: 27px 0;
+    .clear();
+    &>div {
+      float: left;
+    }
+    .left {
+      width: 467px;
+      text-align: right;
+      margin-right: 47px;
+      img {
+        width: 110px;
+        height: 110px;
+      }
+    }
+    .right {
+      font-size: @font12;
+      color: #8b939d;
+      li {
+        height: 29px;
+        line-height: 29px;
+      }
+    }
+  }
+  .footer {
+    background-color: #151c24;
+    font-size: @font12;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #8b939d;
+  }
+}
+
+article {
+  section {
+    .box-title{
+      text-align: center;
+      p:first-of-type {
+        font-size: @font26;
+        color: @blue;
+        margin: 0 !important;
+        font-weight: 600;
+      }
+      p {
+        margin-top: 12px;
+        font-size: @font16;
+        color: @gray;
+
+      }
+      p:last-of-type {
+        margin-bottom: 43px;
+      }
+    }
+  }
+}
+.yellow-title-box {
+  width: 100%;
+  .clear();
+  padding: 0 15px 0 20px;
+  height: 55px;
+  line-height: 55px;
+  background-color: @yellow;
+  .boxsize();
+  .title {
+    font-size: @font16;
+    color: #fff;
+    font-weight: 600;
+    float: left;
+  }
+  a {
+    font-size: @font12;
+    color: #fff;
+    float: right;
+  }
+}
+.right-float {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  z-index: 1300;
+  li {
+    text-align: center;
+    width: 50px;
+    position: relative;
+    .boxsize();
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    margin-bottom: 7px;
+    color: @line;
+    font-size: @font14;
+    cursor: pointer;
+    border: 1px solid @line;
+    a {
+      color: @line;
+      font-size: @font14;
+    }
+    i {
+      display: block;
+      font-size: 35px !important;
+    }
+    &:last-of-type {
+      i {
+        font-size: 14px !important;
+      }
+    }
+    div {
+      .transition();
+      display: none;
+      width: 136px;
+      height: 36px;
+      position: absolute;
+      background-color: @blue;
+      left: -150px;
+      top: 10px;
+      font-size: @font16;
+      color: #fff;
+      line-height: 36px;
+      span {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 16px solid @blue;
+        border-bottom: 10px solid transparent;
+        right: -16px;
+        top: 8px;
+      }
+    }
+    &:last-of-type {
+      div {
+        width: 130px;
+        height: 130px;
+        img {
+          width: 110px;
+          margin-top: 10px;
+          height: 110px;
+        }
+      }
+    }
+    &:hover {
+      background-color: @blue;
+      border: 1px solid @blue;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      div {
+        display: block;
+        .transition();
+      }
+    }
+  }
+  &>span {
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: 50px;
+    .transition();
+    height: 50px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    background-color: @blue;
+    &.up {
+      .transition();
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    i {
+      font-size: 30px;
+    }
+  }
+}
