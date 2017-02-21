@@ -247,11 +247,11 @@
         <ul>
           <li>工作地区</li>
           <li>
-            成都 <i class="iconfont icon-arrowDown"></i>
-            <ul>
-              <li>diqu</li>
-              <li>diqu</li>
-              <li>diqu</li>
+            <span>成都</span> <i class="iconfont icon-arrowDown"></i>
+            <ul class="mycity">
+              <li></li>
+              <li></li>
+
             </ul>
           </li>
         </ul>
@@ -260,7 +260,7 @@
         <ul>
           <li>工作性质</li>
           <li>
-            成都<i class="iconfont icon-arrowDown"></i>
+            <span>成都</span><i class="iconfont icon-arrowDown"></i>
             <ul>
               <li>diqu</li>
             </ul>
@@ -271,7 +271,7 @@
         <ul>
           <li>擅长方向</li>
           <li>
-            成都<i class="iconfont icon-arrowDown"></i>
+            <span>成都</span><i class="iconfont icon-arrowDown"></i>
             <ul>
               <li>diqu</li>
             </ul>
@@ -282,7 +282,7 @@
         <ul>
           <li>擅长内容</li>
           <li>
-            成都<i class="iconfont icon-arrowDown"></i>
+            <span>成都</span><i class="iconfont icon-arrowDown"></i>
             <ul>
               <li>diqu</li>
             </ul>
@@ -456,6 +456,7 @@
       $('.right-float-span').on('click',function(){
         $("html,body").animate({scrollTop: 0}, 1000);
       })
+      var icon = $('<i class="iconfont icon-iconcha"></i>')
       $('.img-box').slick({
         autoplay:true,
         infinite: true,
@@ -480,7 +481,7 @@
       $('.left-top-nav>ul>li>ul>li:last-of-type span').on('click',function(){
         var text = $(this).text();
           var i =$(this).parents('ul').parents('li').index();
-        $('.select ul li').eq(i).text(text);
+        $('.select ul li').eq(i).text(text).append(icon);
         var i =$(this).parent().parent().hide(400)
       })
       $('#s_county').delegate('span','click',function(){
@@ -491,6 +492,7 @@
           var span = $("<span>"+diqu[i]+"</span>")
           $('.left-city-box').append(span)
         }
+        $('.left-city-box').append(icon)
         $(this).parent().parent().hide(400)
       })
       $('article section:nth-of-type(2) .box:first-of-type li').on('click',function(){
@@ -498,6 +500,51 @@
       })
       $('#my-select-nav .box>ul>li:nth-of-type(2)').on('click',function(){
         $(this).children('ul').slideToggle(400)
+      })
+      $('#my-select-nav .box:nth-of-type(3)>ul>li:nth-of-type(2) li').on('click',function(){
+        $(this).parents('li').find('span').text($(this).text())
+      })
+      $('#my-select-nav .box:nth-of-type(4)>ul>li:nth-of-type(2) li').on('click',function(){
+        $(this).parents('li').find('span').text($(this).text())
+      })
+      $('#my-select-nav .box:nth-of-type(5)>ul>li:nth-of-type(2) li').on('click',function(){
+        $(this).parents('li').find('span').text($(this).text())
+      })
+      var mycitys = city.all();
+      mycitys.forEach(function(i){
+        var li = $('<span>'+i+'</span>');
+        $('.mycity li:first-of-type').append(li);
+      })
+      $('.mycity li:first-of-type span').on('click',function(e){
+        e.stopPropagation();
+        var text = $(this).text();
+        var cs = city.get(text);
+        $('.mycity li:last-of-type').html(' ')
+        cs.forEach(function(i){
+          //此处追加城市
+          var li = $('<span>'+i+'</span>');
+          li.on('click',function(e){
+            e.stopPropagation();
+            var text = $(this).text();
+            $('.mycity').parent().children('span').text(text);
+            $('.mycity').slideUp(400);
+          })
+          $('.mycity li:last-of-type').append(li);
+        })
+      })
+      $('.mycity').on('mouseleave',function(){
+        $(this).slideUp(400)
+      })
+      $('#my-select-nav .box>ul>li:nth-of-type(2)').on('mouseover',function(e){
+        e.stopPropagation()
+      })
+      $('.left-top-nav>ul>li').on('mouseover',function(e){
+        e.stopPropagation()
+      })
+
+      $(window).on('mouseover',function(){
+        $('#my-select-nav .box>ul>li:nth-of-type(2) ul').slideUp(400);
+        $('.left-top-nav>ul>li ul').hide(300);
       })
     })
   </script>

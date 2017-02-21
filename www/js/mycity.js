@@ -6,7 +6,8 @@ citys.forEach(function(i){
 $('.ghdq').on('click',function(){
   $('.cityss').slideToggle(400);
 })
-$('.city-c li').on('click',function(){
+$('.city-c li').on('click',function(e){
+  e.stopPropagation();
   var text = $(this).text();
   console.log(text);
   var cs = city.get(text);
@@ -14,14 +15,15 @@ $('.city-c li').on('click',function(){
   cs.forEach(function(i){
     //此处追加城市
     var li = $('<li>'+i+'</li>');
-    li.on('click',function(){
+    li.on('click',function(e){
+      e.stopPropagation();
       var text = $(this).text();
       $('.yxdd').text(text);
-      $('.cityss').slideToggle(400);
+      $('.cityss').slideUp(400);
     })
     $('.city-b').append(li);
   })
 })
 $('.cityss').on('mouseleave',function(){
-  $(this).slideToggle(400)
+  $(this).slideUp(400)
 })
