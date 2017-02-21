@@ -80,6 +80,67 @@
   </nav>
   <article>
     <section class="page-width">
+      <div class="left-top-nav">
+        <div class="title">
+          顶部
+        </div>
+        <ul>
+          <li>所在地区 <i class="iconfont icon-dingwei"></i><span class="left-city">成都</span>
+            <ul>
+              <li id="s_province"></li>
+              <li id="s_city"></li>
+              <li id="s_county"></li>
+            </ul>
+          </li>
+          <li>擅长方向
+            <ul>
+              <li><span>2</span></li>
+              <li><span>2</span></li>
+              <li><span>2</span></li>
+              <li><span>2</span></li>
+              <li><span>2</span></li>
+            </ul>
+          </li>
+          <li>擅长专业
+            <ul>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+            </ul>
+          </li>
+          <li>擅长内容
+            <ul>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+            </ul>
+          </li>
+          <li>性质
+            <ul>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+              <li><span>123</span></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="select">
+          <span>已选</span>
+          <ul>
+            <li class="left-city-box"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
       <div class="box-title">
         <p>优秀推荐
           </p>
@@ -172,7 +233,7 @@
     <div class="banner page-width">
       <img src="./img/xqk_03.gif" alt=""/>
     </div>
-    <section class="page-width">
+    <section class="page-width" id="my-select-nav">
       <div class="box">
         <ul>
           <li class="active">综合拍下</li>
@@ -197,7 +258,7 @@
       </div>
       <div class="box">
         <ul>
-          <li>工作地区</li>
+          <li>工作性质</li>
           <li>
             成都<i class="iconfont icon-arrowDown"></i>
             <ul>
@@ -208,7 +269,7 @@
       </div>
       <div class="box">
         <ul>
-          <li>工作地区</li>
+          <li>擅长方向</li>
           <li>
             成都<i class="iconfont icon-arrowDown"></i>
             <ul>
@@ -219,7 +280,7 @@
       </div>
       <div class="box">
         <ul>
-          <li>工作地区</li>
+          <li>擅长内容</li>
           <li>
             成都<i class="iconfont icon-arrowDown"></i>
             <ul>
@@ -289,6 +350,8 @@
         </ul>
         <div class="img-box">
           <img src="./img/xqk_07.gif" alt=""/>
+          <img src="./img/xqk_07.gif" alt=""/>
+          <img src="./img/xqk_07.gif" alt=""/>
         </div>
       </div>
     </section>
@@ -355,10 +418,12 @@
   </div>
   <script src="./js/lib/jquery.min.js"></script>
   <script src="./js/slick/slick.min.js"></script>
+  <script src="./js/area.js"></script>
   <script src="./js/city.js"></script>
   <script src="./js/mycity.js"></script>
   <script>
     $(function() {
+      _init_area();
       $('.my-swiper').slick({
         autoplay:true,
         infinite: true,
@@ -390,6 +455,49 @@
       })
       $('.right-float-span').on('click',function(){
         $("html,body").animate({scrollTop: 0}, 1000);
+      })
+      $('.img-box').slick({
+        autoplay:true,
+        infinite: true,
+        arrows:false,
+      })
+      $('.left-top-nav li').on('click',function(e){
+        e.stopPropagation();
+      })
+      $('.left-top-nav>ul>li').on('click',function(){
+        $(this).children('ul').toggle(400)
+        $(this).siblings().children('ul').hide(400)
+      })
+      var diqu = [];
+      $('#s_province').delegate('span','click',function(){
+        diqu.length = 1;
+        diqu[0] = $(this).text();
+      })
+      $('#s_city').delegate('span','click',function(){
+        diqu.length = 2;
+        diqu[1] = $(this).text();
+      })
+      $('.left-top-nav>ul>li>ul>li:last-of-type span').on('click',function(){
+        var text = $(this).text();
+          var i =$(this).parents('ul').parents('li').index();
+        $('.select ul li').eq(i).text(text);
+        var i =$(this).parent().parent().hide(400)
+      })
+      $('#s_county').delegate('span','click',function(){
+        diqu[2] = $(this).text();
+        $('.left-city').text(diqu[1]);
+        $('.left-city-box').html('')
+        for(var i = 0, j = diqu.length; i < j;i++) {
+          var span = $("<span>"+diqu[i]+"</span>")
+          $('.left-city-box').append(span)
+        }
+        $(this).parent().parent().hide(400)
+      })
+      $('article section:nth-of-type(2) .box:first-of-type li').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active')
+      })
+      $('#my-select-nav .box>ul>li:nth-of-type(2)').on('click',function(){
+        $(this).children('ul').slideToggle(400)
       })
     })
   </script>

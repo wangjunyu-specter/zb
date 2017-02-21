@@ -358,3 +358,88 @@ article section:last-of-type a {
   font-size: 16px;
   display: inline-block;
 }
+.left-top-nav {
+  position: absolute;
+  width: 140px;
+  left: -140px;
+  text-align: center;
+  top: 0;
+}
+.left-top-nav .title {
+  height: 50px;
+  line-height: 50px;
+  background-color: #009ea7;
+  font-size: 16px;
+  color: #fff;
+}
+.left-top-nav > ul > li {
+  font-size: 16px;
+  position: relative;
+  color: #666666;
+  height: 42px;
+  line-height: 42px;
+  cursor: pointer;
+}
+.left-top-nav > ul > li > i {
+  font-size: 12px;
+  position: absolute;
+}
+.left-top-nav > ul > li > span {
+  font-size: 12px;
+  position: absolute;
+  color: #009ea7;
+  right: 0;
+}
+.left-top-nav > ul > li:nth-of-type(odd) {
+  background-color: #efefef;
+}
+.left-top-nav > ul > li:nth-of-type(even) {
+  background-color: #f6f5f5;
+}
+.left-top-nav > ul > li ul {
+  display: none;
+  position: absolute;
+  left: 140px;
+  width: 1200px;
+  background-color: #fff;
+  top: 0;
+  text-align: left;
+  z-index: 1200;
+  cursor: default;
+}
+.left-top-nav > ul > li ul li {
+  height: auto;
+  background-color: #fff !important;
+  line-height: 42px;
+  border-bottom: 1px dotted #cccccc;
+}
+.left-top-nav > ul > li ul li span {
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+.left-top-nav .select {
+  background-color: #f6f5f5;
+}
+.left-top-nav .select > span {
+  display: block;
+  font-size: 16px;
+  color: #666666;
+  height: 42px;
+  line-height: 42px;
+}
+.left-top-nav .select ul {
+  font-size: 12px;
+  color: #a6a3a3;
+  text-align: right;
+  padding-right: 9px;
+  padding-bottom: 8px;
+}
+.left-top-nav .select ul li:first-of-type {
+  color: #ffc001;
+  margin-bottom: 8px;
+}
+.left-top-nav .select ul li span {
+  margin-left: 5px;
+}

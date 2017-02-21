@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Sun Feb 19 04:00:00 2017
+Created by FontForge 20120731 at Tue Feb 21 19:01:48 2017
  By admin
 </metadata>
 <defs>
@@ -71,6 +71,8 @@ q121 0 207 -84t86 -203v-8v-25q24 -18 24 -59q0 -26 -8 -39q13 -19 40 -62l3 -5q22 -
 t32 33q2 15 -19 31t-58 28l-24 8l18 18q21 22 37.5 55t20.5 63l6 41l32 -48q10 -15 15.5 -22.5t14 -14t16.5 -6.5v0h4q12 8 12 59.5t-22 93.5l-3 5q-33 51 -47 70l-10 14l15 9q5 4 5 25q0 13 -2.5 20.5t-5.5 10t-9 6.5l-10 5l2 11q1 9 1 31v8q0 106 -76.5 180.5t-184.5 74.5
 q-109 0 -184.5 -74t-75.5 -181q0 -18 4 -40l1 -10l-8 -6q-22 -15 -22 -36q0 -12 13 -37l5 -10l-8 -8q-36 -39 -50 -66q-19 -39 -23 -83t6 -63q4 -8 7 -9v0q12 0 50 47l33 40l4 -38q7 -65 58 -117l19 -19l-26 -8q-37 -11 -60.5 -28.5t-21.5 -32.5q3 -22 43 -35t92 -7
 q76 8 105 52l5 7h13l4 -2q19 -9 33 0z" />
+    <glyph glyph-name="iconcha" unicode="&#xe686;" 
+d="M876 653l-34 34l-331 -332l-320 322l-34 -35l320 -322l-331 -332l35 -34l330 332l312 -314l35 35l-312 313z" />
     <glyph glyph-name="arrowDown" unicode="&#xe662;" 
 d="M528 145l438 431q5 5 5 12.5t-5 12.5t-12 5t-12 -5l-426 -419l-425 424q-5 5 -12 5t-12 -5t-5 -12t5 -12l437 -437q5 -5 12 -5t12 5z" />
     <glyph glyph-name="jiantou-copy" unicode="&#xe639;" 
