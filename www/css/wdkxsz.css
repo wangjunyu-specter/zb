@@ -1,0 +1,151 @@
+section {
+  margin-bottom: 20px !important;
+}
+.section {
+  margin-bottom: 100px;
+}
+.section::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.section > div {
+  float: left;
+  border: 1px solid #cccccc;
+}
+.section .left {
+  width: 194px;
+}
+.section .left li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #cccccc;
+  font-size: 12px;
+  color: #666666;
+}
+.section .left li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.section .left li:last-of-type {
+  border-bottom: none;
+}
+.section .left li i {
+  margin-left: 17px;
+}
+.section .left li span {
+  float: right;
+  width: 148px;
+  padding-left: 12px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.section .left li:hover,
+.section .left li.active {
+  background-color: #009ea7;
+  color: #fff;
+}
+.section .left li:hover span,
+.section .left li.active span {
+  border-left: 1px solid #fff;
+}
+.section .right {
+  width: 1000px;
+  padding: 22px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.section .right .title {
+  font-size: 10px;
+  color: #666666;
+}
+.section .right .btn-group {
+  margin: 20px 0;
+}
+.section .right .btn-group button {
+  display: inline-block !important;
+}
+.section .right .btn-group button:first-of-type {
+  width: 102px;
+  height: 34px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #009ea7;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  font-size: 10px;
+  display: block;
+  border: 1px solid #009ea7;
+  margin-right: 30px;
+}
+.section .right .btn-group button:last-of-type {
+  width: 102px;
+  height: 34px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #666666;
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  line-height: 34px;
+  font-size: 10px;
+  display: block;
+  border: 1px solid #cccccc;
+}
+.section .right table {
+  border: 1px solid #cccccc;
+}
+.section .right table thead {
+  font-size: 14px;
+}
+.section .right table thead th {
+  height: 60px;
+  background-color: #009ea7;
+  color: #fff;
+  border-right: 1px solid #cccccc;
+}
+.section .right table thead th:first-of-type {
+  width: 205px;
+}
+.section .right table thead th:nth-of-type(2) {
+  width: 90px;
+}
+.section .right table thead th:nth-of-type(3) {
+  width: 160px;
+}
+.section .right table thead th:nth-of-type(4) {
+  width: 160px;
+}
+.section .right table thead th:nth-of-type(5) {
+  width: 277px;
+}
+.section .right table thead th:last-of-type {
+  width: 78px;
+  border-right: none;
+}
+.section .right table tbody td {
+  font-size: 12px;
+  color: #333;
+  padding: 20px 10px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+.section .right table tbody td span {
+  color: #009ea7;
+  margin-right: 10px;
+}
+.section .right table tbody td span:last-of-type {
+  margin-right: 0;
+}
+.section .right table tbody td:nth-of-type(5) {
+  text-align: left;
+}
